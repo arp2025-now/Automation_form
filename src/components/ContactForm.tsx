@@ -160,7 +160,7 @@ export default function ContactForm({ onSubmit, onPrev, isSubmitting }: ContactF
         </p>
       </div>
 
-      {/* Buttons — back on right (RTL), submit on left */}
+      {/* Buttons - back on right (RTL), submit on left */}
       <div className="flex gap-3">
         <motion.button
           whileHover={{ scale: 1.02 }}

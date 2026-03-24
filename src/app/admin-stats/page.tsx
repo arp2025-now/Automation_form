@@ -189,21 +189,21 @@ export default function AdminStats() {
       result.push({
         question: "ניהול שוטף",
         finding: `${noSystemPct}% מהנשאלים מנהלים בלי מערכת מסודרת (הכל בראש או אקסלים מפוזרים).`,
-        recommendation: "קהל יעד מצוין להטמעת CRM בסיסי. הכאב ברור — כדאי ליצור תוכן שמדבר על 'מעבר מכאוס לסדר'.",
+        recommendation: "קהל יעד מצוין להטמעת CRM בסיסי. הכאב ברור - כדאי ליצור תוכן שמדבר על 'מעבר מכאוס לסדר'.",
         severity: "red",
       });
     } else if (noSystemPct >= 25) {
       result.push({
         question: "ניהול שוטף",
         finding: `${noSystemPct}% מנהלים בלי מערכת, ${Math.round((mgmtCounts.crm_exists / total) * 100)}% כבר יש להם CRM.`,
-        recommendation: "תמהיל מעניין — חלק צריכים הטמעה חדשה, חלק צריכים אופטימיזציה. כדאי לפלח את המסרים.",
+        recommendation: "תמהיל מעניין - חלק צריכים הטמעה חדשה, חלק צריכים אופטימיזציה. כדאי לפלח את המסרים.",
         severity: "yellow",
       });
     } else {
       result.push({
         question: "ניהול שוטף",
         finding: `רוב הנשאלים כבר עובדים עם מערכת (${Math.round(((mgmtCounts.clear_system + mgmtCounts.crm_exists) / total) * 100)}%).`,
-        recommendation: "הקהל מתקדם — כדאי לדבר על אופטימיזציה ואוטומציה, לא על 'למה צריך CRM'.",
+        recommendation: "הקהל מתקדם - כדאי לדבר על אופטימיזציה ואוטומציה, לא על 'למה צריך CRM'.",
         severity: "green",
       });
     }
@@ -219,7 +219,7 @@ export default function AdminStats() {
     if (slowPct >= 40) {
       result.push({
         question: "זמן חזרה לליד",
-        finding: `${slowPct}% לוקח להם יום ומעלה או שזה לא עקבי — לידים נאבדים.`,
+        finding: `${slowPct}% לוקח להם יום ומעלה או שזה לא עקבי - לידים נאבדים.`,
         recommendation: "הזדמנות ברורה: אוטומציית תגובה מיידית (מייל/וואטסאפ אוטומטי) יכולה להוריד את זמן התגובה מיום ל-5 דקות.",
         severity: "red",
       });
@@ -235,7 +235,7 @@ export default function AdminStats() {
     if (fallingPct >= 50) {
       result.push({
         question: "לידים נופלים",
-        finding: `${fallingPct}% מודים שלידים נופלים בין הכיסאות — רובם גם לא יודעים כמה בדיוק.`,
+        finding: `${fallingPct}% מודים שלידים נופלים בין הכיסאות - רובם גם לא יודעים כמה בדיוק.`,
         recommendation: "זה ה-pain point הכי חזק לשיווק. כדאי ליצור תוכן סביב 'כמה כסף אתה מפסיד בלי לדעת' ולהציע אבחון חינמי.",
         severity: "red",
       });
@@ -268,8 +268,8 @@ export default function AdminStats() {
     if (noAiPct >= 50) {
       result.push({
         question: "AI ואוטומציה",
-        finding: `${noAiPct}% עדיין עובדים לגמרי ידנית — בלי שום אוטומציה או AI.`,
-        recommendation: "שוק בשל למסר 'צעד ראשון'. כדאי להציע סדנאות או תוכן שמראה מה AI יכול לעשות בשפה פשוטה — בלי הפחדות.",
+        finding: `${noAiPct}% עדיין עובדים לגמרי ידנית - בלי שום אוטומציה או AI.`,
+        recommendation: "שוק בשל למסר 'צעד ראשון'. כדאי להציע סדנאות או תוכן שמראה מה AI יכול לעשות בשפה פשוטה - בלי הפחדות.",
         severity: "yellow",
       });
     }
@@ -292,7 +292,7 @@ export default function AdminStats() {
       result.push({
         question: "צווארי בקבוק",
         finding: `צווארי הבקבוק הנפוצים ביותר: ${labels.join(" ו-")}.`,
-        recommendation: "כדאי לבנות תכנים ו-case studies שמתמקדים בדיוק בנושאים האלו — הקהל שלך כבר אמר לך מה כואב.",
+        recommendation: "כדאי לבנות תכנים ו-case studies שמתמקדים בדיוק בנושאים האלו - הקהל שלך כבר אמר לך מה כואב.",
         severity: "yellow",
       });
     }
@@ -417,7 +417,7 @@ export default function AdminStats() {
             {/* ===================== CHARTS TAB ===================== */}
             {activeTab === "charts" && (
               <div className="space-y-8">
-                {/* Bar charts — vertical columns with numbered legend */}
+                {/* Bar charts - vertical columns with numbered legend */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {Object.entries(chartDataByQuestion).map(([qId, { label, data }]) => {
                     // Create numbered data for X axis
@@ -493,7 +493,7 @@ export default function AdminStats() {
                 {openAnswers.length > 0 && (
                   <div className="bg-white rounded-2xl p-6 shadow-sm border" style={{ borderColor: "#e2e8f0" }}>
                     <h3 className="text-lg font-bold mb-4" style={{ color: "#0f2b5b" }}>
-                      💬 תשובות פתוחות — &quot;2 הבעיות הגדולות&quot;
+                      💬 תשובות פתוחות - &quot;2 הבעיות הגדולות&quot;
                     </h3>
                     <div className="space-y-3">
                       {openAnswers.map((item, i) => (
@@ -529,7 +529,7 @@ export default function AdminStats() {
               <div className="bg-white rounded-2xl p-6 shadow-sm border" style={{ borderColor: "#e2e8f0" }}>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-bold" style={{ color: "#0f2b5b" }}>
-                    📋 טבלה מרכזת — כל המילויים
+                    📋 טבלה מרכזת - כל המילויים
                   </h3>
                   <span className="text-sm" style={{ color: "#94a3b8" }}>
                     {submissions.length} מילויים
@@ -620,7 +620,7 @@ export default function AdminStats() {
                           {/* All question answers */}
                           {questions.map((q) => {
                             const answer = sub.answers[q.id];
-                            let display = "—";
+                            let display = "-";
                             if (answer) {
                               if (Array.isArray(answer)) {
                                 display = answer.map((a) => getOptionLabel(q.id, a)).join(", ");
@@ -662,7 +662,7 @@ export default function AdminStats() {
                                 👁️ צפה בדוח
                               </button>
                             ) : (
-                              <span style={{ color: "#94a3b8" }}>—</span>
+                              <span style={{ color: "#94a3b8" }}>-</span>
                             )}
                           </td>
                         </tr>
@@ -794,11 +794,11 @@ export default function AdminStats() {
                   </div>
                 )}
 
-                {/* Bottom CTA — detailed action plan */}
+                {/* Bottom CTA - detailed action plan */}
                 <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid #e2e8f0" }}>
                   <div className="py-5 px-6 text-white" style={{ background: "linear-gradient(135deg, #0f2b5b, #2563eb)" }}>
                     <h3 className="text-xl font-bold">🎯 לאן לקחת את הנתונים האלה?</h3>
-                    <p className="text-sm opacity-80 mt-1">מדריך פרקטי — מה לעשות עם התובנות מהשאלון</p>
+                    <p className="text-sm opacity-80 mt-1">מדריך פרקטי - מה לעשות עם התובנות מהשאלון</p>
                   </div>
 
                   <div className="bg-white p-6 space-y-6">
@@ -809,10 +809,10 @@ export default function AdminStats() {
                         <h4 className="font-bold text-base" style={{ color: "#0f2b5b" }}>תוכן שיווקי ממוקד</h4>
                       </div>
                       <div className="space-y-2 text-sm" style={{ color: "#475569" }}>
-                        <p>• <strong>פוסטים ללינקדאין/פייסבוק:</strong> תקחי את צווארי הבקבוק הנפוצים ביותר ותכתבי פוסט לכל אחד. למשל: אם 70% בחרו &quot;מעקב אחרי לידים&quot; — כתבי פוסט: &quot;כמה לידים נפלו לכם השבוע בלי שידעתם?&quot;</p>
-                        <p>• <strong>Reels/TikTok:</strong> צלמי סרטון קצר שמראה את הסטטיסטיקה: &quot;שאלתי X בעלי עסקים... והנה מה שגיליתי&quot; — זה תוכן ויראלי כי הוא מבוסס על דאטא אמיתי.</p>
-                        <p>• <strong>ניוזלטר/מייל:</strong> שלחי סיכום חודשי: &quot;מה למדתי מ-50 בעלי עסקים שמילאו את השאלון&quot; — ערך + סמכות מקצועית.</p>
-                        <p>• <strong>כותרות לפרסום:</strong> השתמשי במילים של הנשאלים עצמם מהתשובות הפתוחות — זו השפה שמדברת ללקוחות.</p>
+                        <p>• <strong>פוסטים ללינקדאין/פייסבוק:</strong> תקחי את צווארי הבקבוק הנפוצים ביותר ותכתבי פוסט לכל אחד. למשל: אם 70% בחרו &quot;מעקב אחרי לידים&quot; - כתבי פוסט: &quot;כמה לידים נפלו לכם השבוע בלי שידעתם?&quot;</p>
+                        <p>• <strong>Reels/TikTok:</strong> צלמי סרטון קצר שמראה את הסטטיסטיקה: &quot;שאלתי X בעלי עסקים... והנה מה שגיליתי&quot; - זה תוכן ויראלי כי הוא מבוסס על דאטא אמיתי.</p>
+                        <p>• <strong>ניוזלטר/מייל:</strong> שלחי סיכום חודשי: &quot;מה למדתי מ-50 בעלי עסקים שמילאו את השאלון&quot; - ערך + סמכות מקצועית.</p>
+                        <p>• <strong>כותרות לפרסום:</strong> השתמשי במילים של הנשאלים עצמם מהתשובות הפתוחות - זו השפה שמדברת ללקוחות.</p>
                       </div>
                     </div>
 
@@ -823,10 +823,10 @@ export default function AdminStats() {
                         <h4 className="font-bold text-base" style={{ color: "#0f2b5b" }}>פילוח לידים לפי בשלות</h4>
                       </div>
                       <div className="space-y-2 text-sm" style={{ color: "#475569" }}>
-                        <p>• <strong>🔴 חמים (ציון 0-29):</strong> בלי מערכת + לידים נופלים + הרבה שעות ידניות. הכאב חד — אלה הכי בשלים לשיחת מכירה. תתקשרי תוך 24 שעות.</p>
+                        <p>• <strong>🔴 חמים (ציון 0-29):</strong> בלי מערכת + לידים נופלים + הרבה שעות ידניות. הכאב חד - אלה הכי בשלים לשיחת מכירה. תתקשרי תוך 24 שעות.</p>
                         <p>• <strong>🟡 פושרים (ציון 30-54):</strong> יש בסיס אבל חסר אופטימיזציה. שלחי להם תוכן ערכי (מדריך PDF, סרטון) ואז הציעי שיחה אחרי שבוע.</p>
-                        <p>• <strong>🟢 עתידיים (ציון 55+):</strong> כבר מסודרים יחסית. שמרי קשר דרך ניוזלטר — הם יחזרו כשיגדלו ויצטרכו שדרוג.</p>
-                        <p>• <strong>לפי תחום:</strong> אם יש ריכוז גבוה של תחום מסוים (למשל נדל&quot;ן) — בני case study ספציפי לתחום הזה.</p>
+                        <p>• <strong>🟢 עתידיים (ציון 55+):</strong> כבר מסודרים יחסית. שמרי קשר דרך ניוזלטר - הם יחזרו כשיגדלו ויצטרכו שדרוג.</p>
+                        <p>• <strong>לפי תחום:</strong> אם יש ריכוז גבוה של תחום מסוים (למשל נדל&quot;ן) - בני case study ספציפי לתחום הזה.</p>
                       </div>
                     </div>
 
@@ -837,10 +837,10 @@ export default function AdminStats() {
                         <h4 className="font-bold text-base" style={{ color: "#0f2b5b" }}>שיחות מכירה מותאמות אישית</h4>
                       </div>
                       <div className="space-y-2 text-sm" style={{ color: "#475569" }}>
-                        <p>• <strong>פתיחה אישית:</strong> &quot;ראיתי שציינת שהבעיה הכי גדולה היא [ציטוט מהתשובה הפתוחה]. ספרי לי עוד על זה&quot; — זה מיידי מייצר אמון.</p>
-                        <p>• <strong>תיאום ציפיות:</strong> אם בחרו &quot;הכל בראש שלי&quot; — דברי על מסע קצר ופשוט, לא על מערכת מורכבת. אם כבר יש CRM — דברי על אופטימיזציה.</p>
-                        <p>• <strong>ROI מוחשי:</strong> אם בחרו 15+ שעות ידניות — חשבי בשיחה: &quot;15 שעות × ₪150 = ₪9,000 בחודש על עבודה שמכונה יכולה לעשות&quot;.</p>
-                        <p>• <strong>הדוח כמנוף:</strong> פתחי את השיחה מתוך הדוח ששלחת: &quot;ראיתי שקיבלת ציון 34 — בוא נראה מה הדבר הראשון שכדאי לשנות&quot;.</p>
+                        <p>• <strong>פתיחה אישית:</strong> &quot;ראיתי שציינת שהבעיה הכי גדולה היא [ציטוט מהתשובה הפתוחה]. ספרי לי עוד על זה&quot; - זה מיידי מייצר אמון.</p>
+                        <p>• <strong>תיאום ציפיות:</strong> אם בחרו &quot;הכל בראש שלי&quot; - דברי על מסע קצר ופשוט, לא על מערכת מורכבת. אם כבר יש CRM - דברי על אופטימיזציה.</p>
+                        <p>• <strong>ROI מוחשי:</strong> אם בחרו 15+ שעות ידניות - חשבי בשיחה: &quot;15 שעות × ₪150 = ₪9,000 בחודש על עבודה שמכונה יכולה לעשות&quot;.</p>
+                        <p>• <strong>הדוח כמנוף:</strong> פתחי את השיחה מתוך הדוח ששלחת: &quot;ראיתי שקיבלת ציון 34 - בוא נראה מה הדבר הראשון שכדאי לשנות&quot;.</p>
                       </div>
                     </div>
 
@@ -851,10 +851,10 @@ export default function AdminStats() {
                         <h4 className="font-bold text-base" style={{ color: "#0f2b5b" }}>בניית מוצרים ושירותים</h4>
                       </div>
                       <div className="space-y-2 text-sm" style={{ color: "#475569" }}>
-                        <p>• <strong>מיני-מוצר:</strong> אם הרבה עונים &quot;אקסלים ורשימות&quot; — בני חבילת &quot;Setup בסיסי&quot; ב-₪2,000 שמעבירה מאקסל ל-CRM תוך שבוע.</p>
-                        <p>• <strong>סדנה:</strong> צרי סדנה בנושא שעולה הכי הרבה: &quot;איך להפסיק לאבד לידים — סדנה מעשית של שעתיים&quot;.</p>
-                        <p>• <strong>אוטומציה כשירות:</strong> אם הבעיות החוזרות הן &quot;עבודה ידנית חוזרת&quot; — הציעי חבילת אוטומציה חודשית (retainer).</p>
-                        <p>• <strong>תמחור מותאם:</strong> לפי גודל העסק — פרילנסרים צריכים פתרון זול ופשוט, עסקים בינוניים מוכנים לשלם על הטמעה מלאה.</p>
+                        <p>• <strong>מיני-מוצר:</strong> אם הרבה עונים &quot;אקסלים ורשימות&quot; - בני חבילת &quot;Setup בסיסי&quot; ב-₪2,000 שמעבירה מאקסל ל-CRM תוך שבוע.</p>
+                        <p>• <strong>סדנה:</strong> צרי סדנה בנושא שעולה הכי הרבה: &quot;איך להפסיק לאבד לידים - סדנה מעשית של שעתיים&quot;.</p>
+                        <p>• <strong>אוטומציה כשירות:</strong> אם הבעיות החוזרות הן &quot;עבודה ידנית חוזרת&quot; - הציעי חבילת אוטומציה חודשית (retainer).</p>
+                        <p>• <strong>תמחור מותאם:</strong> לפי גודל העסק - פרילנסרים צריכים פתרון זול ופשוט, עסקים בינוניים מוכנים לשלם על הטמעה מלאה.</p>
                       </div>
                     </div>
 
@@ -865,10 +865,10 @@ export default function AdminStats() {
                         <h4 className="font-bold text-base" style={{ color: "#0f2b5b" }}>אוטומציית המשך</h4>
                       </div>
                       <div className="space-y-2 text-sm" style={{ color: "#475569" }}>
-                        <p>• <strong>דריפ מיילים:</strong> שלחי סדרת 3 מיילים אחרי הדוח — מייל 1: טיפ מהיר (יום 2), מייל 2: case study (יום 5), מייל 3: הזמנה לשיחה (יום 8).</p>
+                        <p>• <strong>דריפ מיילים:</strong> שלחי סדרת 3 מיילים אחרי הדוח - מייל 1: טיפ מהיר (יום 2), מייל 2: case study (יום 5), מייל 3: הזמנה לשיחה (יום 8).</p>
                         <p>• <strong>ריטרגטינג:</strong> העלי את רשימת המיילים לפייסבוק/גוגל כ-custom audience ותציגי להם מודעות ממוקדות.</p>
                         <p>• <strong>WhatsApp:</strong> שלחי הודעה אישית יום אחרי הדוח: &quot;היי [שם], ראיתי שמילאת את השאלון. האם הדוח היה רלוונטי? יש שאלות?&quot;</p>
-                        <p>• <strong>תזכורת לשיחה:</strong> למי שלא תיאם שיחה תוך 3 ימים — שלחי מייל עם slot ספציפי: &quot;שמרתי לך מקום ביום ד׳ ב-10:00&quot;.</p>
+                        <p>• <strong>תזכורת לשיחה:</strong> למי שלא תיאם שיחה תוך 3 ימים - שלחי מייל עם slot ספציפי: &quot;שמרתי לך מקום ביום ד׳ ב-10:00&quot;.</p>
                       </div>
                     </div>
                   </div>

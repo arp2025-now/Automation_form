@@ -108,7 +108,7 @@ export async function GET() {
   }
 }
 
-// DELETE — remove a record from Airtable
+// DELETE - remove a record from Airtable
 export async function DELETE(request: Request) {
   if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID || !AIRTABLE_TABLE_ID) {
     return NextResponse.json(
