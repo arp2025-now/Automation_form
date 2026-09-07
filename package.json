@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
+    "lightningcss-win32-x64-msvc": "^1.32.0",
     "lottie-react": "^2.4.1",
     "next": "16.1.7",
     "react": "19.2.3",
